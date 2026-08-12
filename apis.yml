@@ -1,17 +1,34 @@
 aid: cyclic-materials
 name: Cyclic Materials
-description: 'Cyclic Materials is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Cyclic Materials is a Kingston, Ontario cleantech company founded in
+  2021 that is building a circular supply chain for rare earth elements and other critical
+  materials. It recovers neodymium-praseodymium (NdPr), samarium, gadolinium, terbium
+  and dysprosium from end-of-life magnet-containing products — electric-vehicle motors,
+  wind-turbine generators, MRI machines and e-waste — using its proprietary MagCycle
+  magnet-separation and REEPure refining processes, and supplies recycled mixed rare
+  earth oxide (rMREO) and recycled copper back into automotive, data-centre, defence
+  and energy manufacturing. The company operates a REEPure commercial demonstration
+  plant and a MagCycle pilot in Kingston, with a Centre of Excellence under construction
+  there and campuses planned in Arizona and South Carolina. It is a materials producer,
+  not a software vendor: it publishes no API, SDK, developer portal or machine-readable
+  specification, and its only public application surface is an Auth0-gated supplier
+  portal for recyclers, aggregators and core buyers.'
+image: https://cdn.prod.website-files.com/6808fc19b9edb865ded52193/681cbe43f986db3eeda7cfc1_favicon-256.png
 url: https://raw.githubusercontent.com/api-evangelist/cyclic-materials/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-11'
 modified: '2026-08-11'
 tags:
 - Company
+- Rare Earth Elements
+- Critical Minerals
+- Recycling
+- Circular Economy
+- Cleantech
+- Advanced Materials
+- Sustainability
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +36,49 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/cyclic-materials-domain-security.yml
 - type: Website
+  url: https://cyclicmaterials.earth
+- type: About
+  url: https://cyclicmaterials.earth/about-us
+- type: Blog
+  url: https://cyclicmaterials.earth/resource-center
+- type: PrivacyPolicy
+  url: https://cyclicmaterials.earth/privacy-policy
+- type: Contact
+  url: https://cyclicmaterials.earth/contact
+- type: LinkedIn
+  url: https://www.linkedin.com/company/cyclic-materials/
+- type: SupplierPortal
+  url: https://portal.cyclicmaterials.earth/
+- type: SecondaryMarket
   url: https://www.hiive.com/securities/cyclic-materials-stock
+x-enrichment:
+  date: '2026-08-11'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Cyclic Materials sells recycled rare earth oxide and copper, not software — its
+    entire public presence is an 85-page Webflow marketing site with no /api,
+    /developers or /docs route, and its only application surface,
+    portal.cyclicmaterials.earth, is an Auth0-gated supplier portal for scrap sellers
+    whose /api/* routes are Next.js auth plumbing rather than a published API.
+  evidence:
+  - url: https://cyclicmaterials.earth/developers
+    status: 404
+  - url: https://cyclicmaterials.earth/openapi.json
+    status: 404
+  - url: https://cyclicmaterials.earth/llms.txt
+    status: 404
+  - url: https://cyclicmaterials.earth/.well-known/agent-card.json
+    status: 404
+  - url: https://portal.cyclicmaterials.earth/openapi.json
+    status: 404
+  - url: https://portal.cyclicmaterials.earth/api/auth/login
+    status: 400
+  checked: '2026-08-11'

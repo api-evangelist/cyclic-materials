@@ -1,0 +1,52 @@
+generated: '2026-08-11'
+method: probed
+source: live GET of /.well-known/* on every host named in apis.yml
+note: >-
+  Every well-known path 404s on both hosts. The marketing site (Webflow) answers
+  /.well-known/* with a short HTML body reading "Invalid .well-known request"; the
+  supplier portal (Next.js on Vercel) answers with its standard 404 page. No document
+  was served, so NO WellKnown, APICatalog or SecurityTxt pointer is emitted in apis.yml
+  — this file records a verified absence, not a presence.
+hosts:
+- host: https://cyclicmaterials.earth
+  platform: Webflow
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://portal.cyclicmaterials.earth
+  platform: Next.js on Vercel
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+summary:
+  hosts_probed: 2
+  paths_probed: 16
+  documents_found: 0
