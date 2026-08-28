@@ -13,6 +13,17 @@ description: 'Cyclic Materials is a Kingston, Ontario cleantech company founded 
   not a software vendor: it publishes no API, SDK, developer portal or machine-readable
   specification, and its only public application surface is an Auth0-gated supplier
   portal for recyclers, aggregators and core buyers.'
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 image: https://cdn.prod.website-files.com/6808fc19b9edb865ded52193/681cbe43f986db3eeda7cfc1_favicon-256.png
 url: https://raw.githubusercontent.com/api-evangelist/cyclic-materials/refs/heads/main/apis.yml
 x-type: company
